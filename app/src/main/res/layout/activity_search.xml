@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.search.SearchActivity">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="8dp"
+                    android:layout_marginVertical="4dp">
+
+                    <ImageView
+                        android:id="@+id/goBack"
+                        style="@style/toolBarImage"
+                        android:layout_alignParentEnd="false"
+                        android:layout_centerVertical="true"
+                        android:padding="10dp"
+                        android:src="@drawable/ic_back" />
+
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_toStartOf="@id/goMore"
+                        android:layout_toEndOf="@id/goBack"
+                        android:layout_width="match_parent"
+                        android:layout_margin="4dp"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="8dp">
+
+                        <LinearLayout
+                            android:gravity="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/goSearch"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:padding="4dp"
+                                android:src="@drawable/ic_search"
+                                app:tint="@color/btnColor1" />
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/searchEdit"
+                                android:layout_weight="1"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:textSize="16sp"
+                                android:padding="8dp"
+                                android:background="@android:color/transparent"
+                                android:inputType="textPersonName"
+                                android:textColor="@color/txtColor1"/>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="8dp"
+                        android:layout_height="8dp"
+                        android:layout_below="@id/goCart"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="-18dp"
+                        android:layout_marginTop="-13dp"
+                        android:layout_marginEnd="8dp"
+                        app:cardBackgroundColor="@color/btnColor1"
+                        app:cardCornerRadius="5dp" />
+
+                    <ImageView
+                        android:id="@+id/goCart"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:padding="8dp"
+                        android:src="@drawable/ic_cart"
+                        app:tint="@color/txtColor4" />
+
+                    <ImageView
+                        android:id="@+id/goMore"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_centerVertical="true"
+                        android:layout_toStartOf="@id/goCart"
+                        android:padding="4dp"
+                        android:src="@drawable/ic_more_vert"
+                        app:tint="@color/txtColor4" />
+
+                </RelativeLayout>
+
+            </androidx.appcompat.widget.Toolbar>
+
+            <LinearLayout
+                android:id="@+id/filterCon"
+                android:gravity="center|end"
+                android:padding="8dp"
+                android:layout_below="@id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    style="@style/btnStyleHome"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:layout_toStartOf="@id/goLocation"
+                    android:background="@drawable/btnborder2"
+                    android:textColor="@color/btnColor1"
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="10dp"
+                    android:text="@string/fast_prepared"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/goLocation"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:padding="8dp"
+                    android:clickable="true"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/btn_app3"
+                    android:src="@drawable/ic_mylocation"
+                    app:tint="@color/white"
+                    android:focusable="true" />
+
+            </LinearLayout>
+
+            <ScrollView
+                android:nestedScrollingEnabled="false"
+                android:layout_below="@id/filterCon"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/titlePage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="4dp"
+                        android:layout_marginBottom="4dp"
+                        android:paddingHorizontal="16dp"
+                        android:text="@string/search"
+                        android:textColor="@color/txtColor1"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/mealList"
+                        android:layout_below="@id/titlePage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="8dp"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        tools:listitem="@layout/item_type_meal" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/searchList"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/mealList"
+                        android:padding="8dp"
+                        android:nestedScrollingEnabled="false"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        tools:listitem="@layout/item_search" />
+
+                </RelativeLayout>
+
+            </ScrollView>
+
+</RelativeLayout>

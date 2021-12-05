@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <color name="purple_200">#ff5656</color>
+    <color name="purple_500">#ff5656</color>
+    <color name="purple_700">#ff5656</color>
+    <color name="teal_200">#ff5656</color>
+    <color name="teal_700">#ff5656</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!--App Color-->
+    <color name="btnColor1">#ff5656</color>
+    <color name="btnColor2">#ffffff</color>
+    <color name="btnColor3">#d5d5d5</color>
+    <color name="btnColor4">#ED13AE0C</color>
+    <color name="fbColor">#4267B2</color>
+
+    <color name="conColor1">#066ab2</color>
+    <color name="conColor2">#fff</color>
+    <color name="conColor3">#d5d5d5</color>
+    <color name="conColor3l">#ECEDEF</color>
+    <color name="conColor4">#FF0000</color>
+    <color name="conColor4l">#FF008C</color>
+    <color name="conColor5">#223c8c</color>
+    <color name="conColor6">#ff5656</color>
+
+    <color name="txtColor1">#FF000000</color>
+    <color name="txtColor2">#FFFFFFFF</color>
+    <color name="txtColor3">#223c8c</color>
+    <color name="txtColor4">#808080</color>
+    <color name="txtColor5">#FF0000</color>
+
+    <color name="lineColor">#d5d5d5</color>
+
+    <color name="background1">#f1f1f1</color>
+
+    <color name="spinner">#BFBFBF</color>
+
+    <color name="loginColor1">#B1E5FF</color>
+    <color name="loginColor2">#43B0E6</color>
+    <color name="startColor">#BAB7E7FF</color>
+
+    <color name="statusBarColor">#fff</color>
+    <color name="toolBarColor">#F8F8F7</color>
+    <color name="bottomBar">#066ab2</color>
+
+    <color name="progressColor1">#299000</color>
+    <color name="progressColor2">#223c8c</color>
+    <color name="progressColor3">#0785c6</color>
+    <color name="progressColor4">#E8BF1FFA</color>
+    <color name="progressColor5">#F8073F</color>
+
+    <color name="colorRouteLine">#FF4081</color>
+
+    <color name="boxColor">#0094FF</color>
+    <color name="mapColor1">#163F51B5</color>
+    <color name="mapColor2">#14E91E63</color>
+    <color name="cardBackgroundColor">#fff</color>
+
+    <color name="background">#F8F8F7</color>
+    <color name="inputBoxColor" tools:override="true" >#ff5656</color>
+
+    <color name="mtrl_textinput_default_box_stroke_color" tools:override="true" >#ff5656</color>
+    <color name="read">#290280</color>
+</resources>

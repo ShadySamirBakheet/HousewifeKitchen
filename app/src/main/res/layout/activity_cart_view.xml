@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.order.CartViewActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/toolBarColor">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:layout_marginVertical="4dp">
+
+            <ImageView
+                android:id="@+id/goBack"
+                style="@style/toolBarImage"
+                android:layout_alignParentEnd="false"
+                android:layout_centerVertical="true"
+                android:padding="10dp"
+                android:src="@drawable/ic_back" />
+
+            <TextView
+                style="@style/toolBarTitle"
+                android:layout_toEndOf="@+id/goBack"
+                android:layout_toStartOf="@id/goMore"
+                android:layout_centerVertical="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cart"/>
+
+            <ImageView
+                android:id="@+id/goMore"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:padding="8dp"
+                android:src="@drawable/ic_menu"
+                app:tint="@color/txtColor4" />
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/cartList"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"/>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            app:cardCornerRadius="125dp"
+            android:layout_margin="64dp"
+            app:cardBackgroundColor="@color/cardBackgroundColor"
+            android:outlineSpotShadowColor="@color/background"
+            android:outlineAmbientShadowColor="@color/background">
+
+            <ImageView
+                android:padding="64dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/empty_cart"
+                app:tint="@color/btnColor1" />
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            android:text="Cart Empty"
+            android:textStyle="bold"
+            android:layout_margin="8dp"
+            android:textColor="@color/txtColor4"
+            android:textSize="24dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingVertical="4dp"
+            android:gravity="center"
+            android:paddingHorizontal="64dp"
+            android:text="Good Food is always cooking!\nGo ahesd , order some yummy items from the menu"
+            android:textColor="@color/txtColor1"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

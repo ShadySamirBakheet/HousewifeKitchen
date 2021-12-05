@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:padding="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/mainCon"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Chef Name"
+                        android:textSize="18dp"
+                        android:padding="4dp"
+                        android:textColor="@color/txtColor1"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="2 day age"
+                        android:textSize="14dp"
+                        android:padding="4dp"
+                        android:textColor="@color/txtColor4"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Status"
+                    android:background="@drawable/btnborder4"
+                    android:textSize="14dp"
+                    android:paddingVertical="8dp"
+                    android:paddingHorizontal="16dp"
+                    android:textColor="@color/txtColor1"/>
+
+                <ImageView
+                    android:id="@+id/moreBtn"
+                    android:padding="10dp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/ic_more_more"
+                    app:tint="@color/btnColor1" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/infoCon"
+                android:padding="8dp"
+                android:visibility="gone"
+                android:layout_below="@id/mainCon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/line1"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginVertical="4dp"
+                    android:layout_marginHorizontal="12dp"
+                    android:src="@color/lineColor"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/orderItemList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/line1"
+                    tools:listitem="@layout/item_order_item"/>
+
+                <ImageView
+                    android:id="@+id/line2"
+                    android:layout_below="@id/orderItemList"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginVertical="4dp"
+                    android:layout_marginHorizontal="12dp"
+                    android:src="@color/lineColor"/>
+
+                <LinearLayout
+                    android:layout_below="@id/line2"
+                    android:layout_marginHorizontal="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Total"
+                        android:textSize="16dp"
+                        android:padding="4dp"
+                        android:textColor="@color/txtColor1"/>
+
+                    <TextView
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="$ 55"
+                        android:textSize="14dp"
+                        android:padding="4dp"
+                        android:textColor="@color/txtColor5"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginHorizontal="12dp"
+            android:src="@color/txtColor4"/>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

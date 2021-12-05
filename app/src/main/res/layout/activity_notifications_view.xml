@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.notifications.NotificationsViewActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:background="@color/background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:elevation="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:layout_marginVertical="4dp">
+
+            <TextView
+                android:id="@+id/toolbar_title"
+                style="@style/toolBarTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/goBack"
+                android:layout_toStartOf="@id/goMore"
+                android:text="@string/update_profile" />
+
+            <ImageView
+                android:id="@+id/goBack"
+                style="@style/toolBarImage"
+                android:layout_alignParentEnd="false"
+                android:layout_centerVertical="true"
+                android:padding="10dp"
+                android:src="@drawable/ic_back" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_below="@id/goCart"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="-18dp"
+                android:layout_marginTop="-13dp"
+                android:layout_marginEnd="8dp"
+                app:cardBackgroundColor="@color/btnColor1"
+                app:cardCornerRadius="5dp" />
+
+            <ImageView
+                android:id="@+id/goCart"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:padding="8dp"
+                android:src="@drawable/ic_cart"
+                app:tint="@color/black" />
+
+            <ImageView
+                android:id="@+id/goMore"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@id/goCart"
+                android:padding="4dp"
+                android:src="@drawable/ic_more_vert"
+                app:tint="@color/black" />
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/subject"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="Google Fonts"
+                android:textColor="@color/txtColor1"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/imgItem"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_below="@id/subject"
+                android:padding="8dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/image2" />
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_below="@id/imgItem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:lineSpacingExtra="8dp"
+                android:padding="8dp"
+                android:text="11 May 2021"
+                android:gravity="center_vertical"
+                android:drawablePadding="8dp"
+                android:drawableTint="@color/txtColor4"
+                android:drawableEnd="@drawable/ic_date"
+                android:textColor="@color/txtColor4"
+                android:textSize="13dp" />
+
+            <TextView
+                android:id="@+id/body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/date"
+                android:padding="8dp"
+                android:text="notifications details notifications details notifications details notifications details notifications details notifications details notifications details notifications details notifications details notifications details notifications details notifications details notifications details notifications details notifications details notifications details notifications details notifications details "
+                android:textColor="@color/txtColor4"
+                android:textSize="16dp" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

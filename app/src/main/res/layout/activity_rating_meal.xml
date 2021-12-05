@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.meal.RatingMealActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:layout_marginVertical="4dp">
+
+            <ImageView
+                android:id="@+id/goBack"
+                style="@style/toolBarImage"
+                android:layout_alignParentEnd="false"
+                android:layout_centerVertical="true"
+                android:padding="10dp"
+                android:src="@drawable/ic_back" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_below="@id/goCart"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="-16sp"
+                android:layout_marginTop="-13dp"
+                android:layout_marginEnd="8dp"
+                app:cardBackgroundColor="@color/btnColor1"
+                app:cardCornerRadius="5dp" />
+
+            <ImageView
+                android:id="@+id/goCart"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:padding="8dp"
+                android:src="@drawable/ic_cart"
+                app:tint="@color/txtColor4" />
+
+            <ImageView
+                android:id="@+id/goMore"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@id/goCart"
+                android:padding="4dp"
+                android:src="@drawable/ic_more_vert"
+                app:tint="@color/txtColor4" />
+
+
+            <TextView
+                android:id="@+id/toolbar_title"
+                style="@style/toolBarTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@id/goMore"
+                android:layout_toEndOf="@id/goBack"
+                android:text="Rating Meal" />
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_below="@id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:padding="16dp"
+                    android:layout_margin="8dp"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="150dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/image6"/>
+
+                    <TextView
+                        android:layout_margin="8dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/txtColor1"
+                        android:textSize="24dp"
+                        android:textStyle="bold"
+                        android:text="Meal Name"/>
+
+                    <TextView
+                        android:layout_margin="8dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/txtColor1"
+                        android:textSize="18dp"
+                        android:gravity="center"
+                        android:text="Rate Desc Rate Desc Rate Desc Rate Desc "/>
+
+                </LinearLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_margin="8dp"
+                    app:cardBackgroundColor="@color/cardBackgroundColor"
+                    app:cardCornerRadius="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:padding="8dp"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_margin="8dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/txtColor1"
+                            android:textSize="18dp"
+                            android:text="Rate The Appearance of the Application"/>
+
+                        <RatingBar
+                            android:id="@+id/ratingApperarance"
+                            android:layout_margin="8dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:saveEnabled="true"
+                            android:stepSize=".1"
+                            android:progressTint="@color/btnColor1"
+                            android:progressBackgroundTint="@color/conColor6"
+                            android:numStars="5"/>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_margin="8dp"
+                    app:cardBackgroundColor="@color/cardBackgroundColor"
+                    app:cardCornerRadius="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:padding="8dp"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_margin="8dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/txtColor1"
+                            android:textSize="18dp"
+                            android:text="Rate Functionality the of the application"/>
+
+                        <RatingBar
+                            android:id="@+id/ratingFuncation"
+                            android:layout_margin="8dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:saveEnabled="true"
+                            android:stepSize=".1"
+                            android:progressTint="@color/btnColor1"
+                            android:progressBackgroundTint="@color/conColor6"
+                            android:numStars="5"/>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_margin="8dp"
+                    app:cardBackgroundColor="@color/cardBackgroundColor"
+                    app:cardCornerRadius="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:padding="8dp"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_margin="8dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/txtColor1"
+                            android:textSize="18dp"
+                            android:text="Rate usability the of the application"/>
+
+                        <RatingBar
+                            android:id="@+id/ratingUsability"
+                            android:layout_margin="8dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:saveEnabled="true"
+                            android:stepSize=".1"
+                            android:progressTint="@color/btnColor1"
+                            android:progressBackgroundTint="@color/conColor6"
+                            android:numStars="5"/>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_margin="8dp"
+                    app:cardBackgroundColor="@color/cardBackgroundColor"
+                    app:cardCornerRadius="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:padding="8dp"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Comment"
+                            android:textColor="@color/txtColor1"
+                            android:textSize="16dp"
+                            android:padding="8dp"
+                            android:textStyle="bold"
+                            android:layout_centerVertical="true"
+                            android:layout_toEndOf="@id/back_btn"/>
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="text"
+                            android:padding="8dp"
+                            android:hint="Enter You Comment"
+                            android:background="@android:color/transparent"
+                            android:textColor="@color/txtColor1"
+                            android:textSize="18dp" />
+
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/btnSubmit"
+                    style="@style/btnStyleHome"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="24dp"
+                    android:background="@drawable/btn_app"
+                    android:gravity="center"
+                    android:paddingHorizontal="32dp"
+                    android:text="@string/save"
+                    android:textSize="17dp" />
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

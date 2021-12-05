@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".views.home.ui.MyOrderFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:alpha="0"
+        android:elevation="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/toolBarColor">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:layout_marginVertical="4dp">
+
+            <TextView
+                android:id="@+id/toolbar_title"
+                style="@style/toolBarTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@id/goMore"
+                android:text="@string/my_order" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_below="@id/goCart"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="-18dp"
+                android:layout_marginTop="-13dp"
+                android:layout_marginEnd="8dp"
+                app:cardBackgroundColor="@color/btnColor1"
+                app:cardCornerRadius="5dp" />
+
+            <ImageView
+                android:id="@+id/goCart"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:padding="8dp"
+                android:src="@drawable/ic_cart"
+                app:tint="@color/txtColor4" />
+
+            <ImageView
+                android:id="@+id/goMore"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@id/goCart"
+                android:padding="4dp"
+                android:src="@drawable/ic_more_vert"
+                app:tint="@color/txtColor4" />
+
+
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:id="@+id/conMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:nestedScrollingEnabled="false">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="5dp"
+                android:padding="8dp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:layout_below="@id/goCart2"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="-16sp"
+                    android:layout_marginTop="-13dp"
+                    android:layout_marginEnd="8dp"
+                    app:cardBackgroundColor="@color/btnColor1"
+                    app:cardCornerRadius="5dp" />
+
+                <ImageView
+                    android:id="@+id/goCart2"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:padding="8dp"
+                    android:src="@drawable/ic_cart"
+                    app:tint="@color/txtColor1" />
+
+                <ImageView
+                    android:id="@+id/goMore2"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@id/goCart2"
+                    android:padding="4dp"
+                    android:src="@drawable/ic_more_vert"
+                    app:tint="@color/txtColor1" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/profileCon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingHorizontal="32dp"
+                android:paddingVertical="64dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:text="@string/my_order"
+                    android:textColor="@color/txtColor1"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_margin="8dp"
+                app:cardCornerRadius="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/profileCon">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:orientation="vertical">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/orderList"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:listitem="@layout/item_order_home"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

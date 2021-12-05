@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="450dp">
+
+    <ImageView
+        android:id="@+id/imgItem"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/image1"
+        android:scaleType="centerCrop"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@color/black"
+        android:alpha=".2"
+        android:scaleType="centerCrop"/>
+
+    <LinearLayout
+        android:gravity="bottom"
+        android:orientation="vertical"
+        android:paddingHorizontal="4dp"
+        android:paddingVertical="16dp"
+        android:layout_marginBottom="35dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:text="@string/find_your_favorite_meal"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="24dp"
+            android:padding="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

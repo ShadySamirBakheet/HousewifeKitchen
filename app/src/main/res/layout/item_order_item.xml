@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_marginHorizontal="8dp"
+    android:layout_height="wrap_content">
+
+
+    <TextView
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Food Name"
+        android:textSize="16dp"
+        android:padding="4dp"
+        android:textColor="@color/txtColor1"/>
+
+    <TextView
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="$ 55"
+        android:textSize="14dp"
+        android:padding="4dp"
+        android:textColor="@color/txtColor5"/>
+
+
+</LinearLayout>

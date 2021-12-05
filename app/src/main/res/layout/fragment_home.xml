@@ -1,0 +1,645 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.home.ui.HomeFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:alpha="0"
+        android:elevation="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:layout_marginVertical="4dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_below="@id/goCart"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="-18dp"
+                android:layout_marginTop="-13dp"
+                android:layout_marginEnd="8dp"
+                app:cardBackgroundColor="@color/btnColor1"
+                app:cardCornerRadius="5dp" />
+
+            <ImageView
+                android:id="@+id/goCart"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:padding="8dp"
+                android:src="@drawable/ic_cart"
+                app:tint="@color/txtColor4" />
+
+            <ImageView
+                android:id="@+id/goMore"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@id/goCart"
+                android:padding="4dp"
+                android:src="@drawable/ic_more_vert"
+                app:tint="@color/txtColor4" />
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_toStartOf="@id/goMore"
+                android:layout_width="match_parent"
+                android:layout_margin="4dp"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp">
+
+                <LinearLayout
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/goSearch"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_centerVertical="true"
+                        android:layout_toStartOf="@id/goCart"
+                        android:padding="4dp"
+                        android:src="@drawable/ic_search"
+                        app:tint="@color/btnColor1" />
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/searchEdit"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="16dp"
+                        android:padding="8dp"
+                        android:background="@android:color/transparent"
+                        android:inputType="textPersonName"
+                        android:textColor="@color/txtColor1"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:nestedScrollingEnabled="false"
+        android:id="@+id/conMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:elevation="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:layout_below="@id/goCart2"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="-18dp"
+                    android:layout_marginTop="-13dp"
+                    android:layout_marginEnd="8dp"
+                    app:cardBackgroundColor="@color/btnColor1"
+                    app:cardCornerRadius="5dp" />
+
+                <ImageView
+                    android:id="@+id/goCart2"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:padding="8dp"
+                    android:src="@drawable/ic_cart"
+                    app:tint="@color/txtColor1" />
+
+                <ImageView
+                    android:id="@+id/goMore2"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@id/goCart2"
+                    android:padding="4dp"
+                    android:src="@drawable/ic_more_vert"
+                    app:tint="@color/txtColor1" />
+
+            </RelativeLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_margin="58dp"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp">
+
+                <LinearLayout
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/goSearch2"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_centerVertical="true"
+                        android:layout_toStartOf="@id/goCart"
+                        android:padding="4dp"
+                        android:src="@drawable/ic_search"
+                        app:tint="@color/btnColor1" />
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/searchEdit2"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="16dp"
+                        android:padding="8dp"
+                        android:background="@android:color/transparent"
+                        android:inputType="textPersonName"
+                        android:textColor="@color/txtColor1"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <com.smarteist.autoimageslider.SliderView
+                android:id="@+id/imageSlider"
+                android:layout_width="match_parent"
+                android:layout_height="450dp"
+                android:background="@color/conColor2"
+                app:sliderAnimationDuration="600"
+                app:sliderAutoCycleDirection="back_and_forth"
+                app:sliderAutoCycleEnabled="true"
+                app:sliderIndicatorAnimationDuration="600"
+                app:sliderIndicatorEnabled="true"
+                app:sliderIndicatorGravity="start|bottom"
+                app:sliderIndicatorMarginBottom="40dp"
+                app:sliderIndicatorOrientation="horizontal"
+                app:sliderIndicatorRadius="2dp"
+                app:sliderIndicatorRtlMode="auto"
+                app:sliderIndicatorSelectedColor="@color/conColor6"
+                app:sliderIndicatorUnselectedColor="@color/white"
+                app:sliderScrollTimeInSec="1"
+                app:sliderStartAutoCycle="true" />
+
+            <LinearLayout
+                android:id="@+id/catCon"
+                android:layout_marginTop="16dp"
+                android:layout_below="@id/imageSlider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/goCategories"
+                    android:padding="16dp"
+                    android:clickable="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="@color/txtColor1"
+                        android:textSize="18dp"
+                        android:text="@string/categories_meal"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/txtColor5"
+                        android:textSize="14sp"
+                        android:drawableEnd="@drawable/ic_next"
+                        android:drawableTint="@color/txtColor5"
+                        android:gravity="center"
+                        android:drawablePadding="4dp"
+                        android:text="@string/see_all"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/mealList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/catCon"
+                android:orientation="horizontal"
+                android:padding="8dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/item_type_meal" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_below="@id/mealList"
+                android:id="@+id/reorderCon"
+                android:layout_margin="4dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/cardBackgroundColor">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/goOrders"
+                        android:padding="16dp"
+                        android:clickable="true"
+                        android:background="@drawable/con_app"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textColor="@color/txtColor1"
+                            android:textSize="18dp"
+                            android:text="Order Again"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/txtColor5"
+                            android:textSize="14sp"
+                            android:drawableEnd="@drawable/ic_next"
+                            android:drawableTint="@color/txtColor5"
+                            android:gravity="center"
+                            android:drawablePadding="4dp"
+                            android:text="@string/see_all"/>
+
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/reorderList"
+                        android:nestedScrollingEnabled="false"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="4dp"
+                        android:orientation="horizontal"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        tools:listitem="@layout/item_fast_meals"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_below="@id/reorderCon"
+                android:id="@+id/fastCon"
+                android:layout_margin="4dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/cardBackgroundColor">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/goFast"
+                        android:padding="16dp"
+                        android:clickable="true"
+                        android:background="@drawable/con_app"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textColor="@color/txtColor1"
+                            android:textSize="18dp"
+                            android:text="@string/fast_meals_to_prepare"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/txtColor5"
+                            android:textSize="14sp"
+                            android:drawableEnd="@drawable/ic_next"
+                            android:drawableTint="@color/txtColor5"
+                            android:gravity="center"
+                            android:drawablePadding="4dp"
+                            android:text="@string/see_all"/>
+
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/fastMealList"
+                        android:nestedScrollingEnabled="false"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="4dp"
+                        android:orientation="horizontal"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        tools:listitem="@layout/item_fast_meals"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_below="@id/fastCon"
+                android:id="@+id/longCon"
+                android:layout_margin="4dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/cardBackgroundColor">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/goLongMeal"
+                        android:padding="16dp"
+                        android:clickable="true"
+                        android:background="@drawable/con_app"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textColor="@color/txtColor1"
+                            android:textSize="18dp"
+                            android:text="@string/register_meals_to_prepare"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/txtColor5"
+                            android:textSize="14sp"
+                            android:drawableEnd="@drawable/ic_next"
+                            android:drawableTint="@color/txtColor5"
+                            android:gravity="center"
+                            android:drawablePadding="4dp"
+                            android:text="@string/see_all"/>
+
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/longMealList"
+                        android:nestedScrollingEnabled="false"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="4dp"
+                        android:orientation="horizontal"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        tools:listitem="@layout/item_fast_meals"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_below="@id/longCon"
+                android:id="@+id/videosCon"
+                android:layout_margin="4dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/cardBackgroundColor">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/goVideosMeal"
+                        android:padding="16dp"
+                        android:clickable="true"
+                        android:background="@drawable/con_app"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textColor="@color/txtColor1"
+                            android:textSize="18dp"
+                            android:text="@string/videos_from_chefs"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/txtColor5"
+                            android:textSize="14sp"
+                            android:drawableEnd="@drawable/ic_next"
+                            android:drawableTint="@color/txtColor5"
+                            android:gravity="center"
+                            android:drawablePadding="4dp"
+                            android:text="@string/see_all"/>
+
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/videosList"
+                        android:nestedScrollingEnabled="false"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="4dp"
+                        android:orientation="horizontal"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        tools:listitem="@layout/item_fast_meals"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_below="@id/offersCon"
+                android:id="@+id/moreCon"
+                android:layout_margin="4dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/cardBackgroundColor">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/goMoreMeal"
+                        android:padding="16dp"
+                        android:clickable="true"
+                        android:background="@drawable/con_app"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textColor="@color/txtColor1"
+                            android:textSize="18dp"
+                            android:text="@string/more_meals"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/txtColor5"
+                            android:textSize="14sp"
+                            android:drawableEnd="@drawable/ic_next"
+                            android:drawableTint="@color/txtColor5"
+                            android:gravity="center"
+                            android:drawablePadding="4dp"
+                            android:text="@string/see_all"/>
+
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/moreList"
+                        android:nestedScrollingEnabled="false"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="4dp"
+                        android:orientation="horizontal"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        tools:listitem="@layout/item_fast_meals"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_below="@id/videosCon"
+                android:id="@+id/offersCon"
+                android:layout_margin="4dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/cardBackgroundColor">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/goOffersMeal"
+                        android:padding="16dp"
+                        android:clickable="true"
+                        android:background="@drawable/con_app"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textColor="@color/txtColor1"
+                            android:textSize="18sp"
+                            android:text="@string/offers_meals_or_chefs_offers"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/txtColor5"
+                            android:textSize="14sp"
+                            android:drawableEnd="@drawable/ic_next"
+                            android:drawableTint="@color/txtColor5"
+                            android:gravity="center"
+                            android:drawablePadding="4dp"
+                            android:text="@string/see_all"/>
+
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/offersList"
+                        android:nestedScrollingEnabled="false"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="4dp"
+                        android:orientation="horizontal"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        tools:listitem="@layout/item_fast_meals"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_below="@id/moreCon"
+                android:id="@+id/chefsCon"
+                android:layout_margin="4dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/cardBackgroundColor">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/goChefsMeal"
+                        android:padding="16dp"
+                        android:clickable="true"
+                        android:background="@drawable/con_app"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textColor="@color/txtColor1"
+                            android:textSize="18dp"
+                            android:text="@string/favorite_chefs"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/txtColor5"
+                            android:textSize="14sp"
+                            android:drawableEnd="@drawable/ic_next"
+                            android:drawableTint="@color/txtColor5"
+                            android:gravity="center"
+                            android:drawablePadding="4dp"
+                            android:text="@string/see_all"/>
+
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/chefsList"
+                        android:nestedScrollingEnabled="false"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="4dp"
+                        android:orientation="horizontal"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        tools:listitem="@layout/item_fast_meals"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

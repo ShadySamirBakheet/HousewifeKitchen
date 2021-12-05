@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="40dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardBackgroundColor="@color/cardBackgroundColor"
+    app:cardCornerRadius="18dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="32dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            app:cardCornerRadius="75dp"
+            app:contentPadding="8dp"
+            app:cardBackgroundColor="@color/btnColor1">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="134dp"
+                android:layout_height="134dp"
+                app:cardCornerRadius="67dp"
+                app:contentPadding="4dp"
+                app:cardBackgroundColor="@color/cardBackgroundColor">
+
+                <ImageView
+                    android:padding="24dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/done_mark"
+                    app:tint="@color/btnColor1" />
+
+            </androidx.cardview.widget.CardView>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:gravity="center"
+            android:text="@string/your_order_is_successfully"
+            android:textColor="@color/txtColor1"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:gravity="center"
+            android:text="@string/you_can_track_the_delivery_in_the_order_section"
+            android:textColor="@color/txtColor1"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/btnSignin"
+            style="@style/btnStyleHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_app3"
+            android:layout_margin="12dp"
+            android:text="@string/continue_shopping"
+            android:textStyle="bold"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:gravity="center"
+            android:text="@string/go_to_order"
+            android:textColor="@color/txtColor4"
+            android:textSize="18sp"/>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
